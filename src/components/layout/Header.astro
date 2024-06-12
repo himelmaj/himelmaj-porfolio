@@ -1,0 +1,62 @@
+---
+import { LanguageSelector } from "astro-i18next/components";
+
+
+const navItems = [
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "mailto:himelmajumder1@gmail.com",
+  },
+]
+
+---
+
+<header
+  class="mb-12 flex w-full flex-wrap pb-3 text-sm sm:flex-nowrap sm:justify-start"
+>
+  <nav
+    class="relative mx-auto flex w-full items-center justify-between sm:flex sm:items-center"
+    aria-label="global"
+  >
+    <h1 class="flex-none text-xl font-semibold" aria-label="Brand">himelmaj</h1>
+
+    <div class="flex flex-row items-center justify-center gap-x-5 sm:gap-x-7">
+
+
+      {
+        navItems.map((item) => (
+          <a
+            href={item.url}
+            class="flex-none text-[1.05rem] font-medium hover:text-foreground/75"
+            aria-label="Nav Menu Item"
+            >{item.title}
+          </a>
+        ))
+      }
+
+      <div class="flex flex-row gap-2">
+        <LanguageSelector
+          showFlag={true}
+          
+          class="bg-zinc-800 p-2 rounded-md px-3 appearance-none cursor-pointer"
+        />
+      </div>
+    </div>
+  </nav>
+</header>
