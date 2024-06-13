@@ -1,14 +1,19 @@
 ---
 import { changeLanguage } from "i18next";
 import Layout from "../../layouts/Layout.astro";
+import AboutMe from "@/components/AboutMe.astro";
+import Experience from "@/components/Experience.astro";
+import Education from "@/components/Education.astro";
 
 changeLanguage("es");
 ---
 
-<Layout >
-
+<Layout>
+  <div class="flex w-full flex-col gap-y-10">
+    <AboutMe />
+    <Experience />
+    <Education />
+  </div>
 </Layout>
 
-<style>
-
-</style>
+<style></style>

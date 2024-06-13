@@ -1,0 +1,72 @@
+---
+import Section from "./ui/Section.astro";
+import Card from "./ui/Card.astro";
+import SantPau from "@/assets/santpau.webp";
+import EscolaPereDeTera from "@/assets/escola-pere-de-tera.webp";
+---
+
+<Section title="Experience">
+  <Card
+    title="Intern Web Developer"
+    subtitle="Hospital de la Santa Creu i Sant Pau"
+    date="Nov 2023 - Abr 2024"
+    imgSrc={SantPau}
+    imgAlt="Sant Pau logo"
+    imgClass="h-12 w-auto md:-left-16 rounded-full"
+    location="Barcelona, Spain"
+    website="https://www.santpau.cat/"
+    locationUrl="https://maps.app.goo.gl/vcx4Q81YWxKLadRn9"
+  >
+    <ul class="ml-4 list-disc text-zinc-800/90 dark:text-zinc-200/90 text-sm">
+      <li>
+        Planificación, creación y mantenimiento integral de un sistema de
+        gestión de datos de pacientes para el hospital, desarrollado de manera
+        autónoma.
+
+        <li>
+          Adición de diversas funcionalidades como consultas de seguimiento de
+          pacientes, creación de registros de consultas y módulos interactivos
+          para usuarios y personal médico.
+        </li>
+
+        <li>
+          Implementación de medidas de seguridad robustas para proteger la
+          información sensible de los usuarios.
+        </li>
+
+        <li>
+          Colaboración con el equipo de desarrollo para la creación de una
+          aplicación web de seguimiento de pacientes.
+        </li>
+
+        <li>
+          Diseño de una interfaz intuitiva y fácil de usar, garantizando una
+          navegación fluida y eficiente para todos los usuarios del sistema.
+        </li>
+      </li>
+    </ul>
+  </Card>
+
+  <Card
+    title="Intern IT Technician"
+    subtitle="Escola Pere de Tera"
+    date="Oct 2021 - Mar 2022"
+    imgSrc={EscolaPereDeTera}
+    imgAlt="Escola Pere de Tera logo"
+    imgClass="h-12 w-auto md:-left-16 rounded-full"
+    website="https://agora.xtec.cat/ceip-peredetera/"
+    location="Badalona, Spain"
+    locationUrl="https://maps.app.goo.gl/1RcCnjz4tx9kmcmk6"
+  >
+    <ul class="ml-4 list-disc text-zinc-800/90 dark:text-zinc-200/90">
+      <li>
+        Asistencia en la resolución de problemas informáticos y mantenimiento de
+        sistemas.
+      </li>
+
+      <li>Configuración y mantenimiento de redes locales.</li>
+
+      <li>Implementación y actualización de programas informáticos.</li>
+    </ul>
+  </Card>
+</Section>

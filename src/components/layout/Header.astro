@@ -25,6 +25,9 @@ const navItems = [
   },
 ]
 
+
+import ThemeToggle from "./ThemeToggle.astro";
+
 ---
 
 <header
@@ -39,7 +42,7 @@ const navItems = [
     <div class="flex flex-row items-center justify-center gap-x-5 sm:gap-x-7">
 
 
-      {
+      <!-- {
         navItems.map((item) => (
           <a
             href={item.url}
@@ -48,15 +51,16 @@ const navItems = [
             >{item.title}
           </a>
         ))
-      }
+      } -->
 
-      <div class="flex flex-row gap-2">
+      <ThemeToggle />
+
+
         <LanguageSelector
           showFlag={true}
           
-          class="bg-zinc-800 p-2 rounded-md px-3 appearance-none cursor-pointer"
+          class="bg-white dark:bg-zinc-900 hover:bg-gray-100 hover:dark:bg-zinc-800 p-2 rounded-md px-3 appearance-none cursor-pointer text-md shadow-md"
         />
-      </div>
     </div>
   </nav>
 </header>

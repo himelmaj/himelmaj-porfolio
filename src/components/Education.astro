@@ -1,0 +1,47 @@
+---
+import Section from "./ui/Section.astro";
+import Card from "./ui/Card.astro";
+import Monlau from "@/assets/monlau.webp";
+import FundacionEsplai from "@/assets/fundacion-esplai.webp";
+---
+
+<Section title="Education">
+  <Card
+    title="Grado Superior de Desarrollo de Aplicaciones Web"
+    subtitle="Monlau"
+    date="Sep 2022 - Jun 2024"
+    imgSrc={Monlau}
+    imgAlt="Monlau logo"
+    imgClass="h-12 w-auto md:-left-16 rounded-full"
+    location="Barcelona, Spain"
+    website="https://www.monlau.com/"
+    locationUrl="https://maps.app.goo.gl/bBkKyWECbE3BHXXd7"
+  />
+
+  
+  <Card
+    title="Bootcamp de ciberseguridad & Python"
+    subtitle="Fundación Esplai - Ciudadanía Comprometida"
+    date="Jun 2023 - Sep 2023"
+    imgSrc={FundacionEsplai}
+    imgAlt="Fundación Esplai logo"
+    imgClass="h-12 w-auto md:-left-16 rounded-full"
+    location="Barcelona, Spain"
+    website="https://fundacionesplai.org/"
+    locationUrl="https://maps.app.goo.gl/bBkKyWECbE3BHXXd7"
+  />
+
+  
+
+  <Card
+    title="Grado Medio de Sistemas Microinformáticos y Redes"
+    subtitle="Monlau"
+    date="Sep 2020 - Jun 2022"
+    imgSrc={Monlau}
+    imgAlt="Monlau logo"
+    imgClass="h-12 w-auto md:-left-16 rounded-full"
+    location="Barcelona, Spain"
+    website="https://www.monlau.com/"
+    locationUrl="https://maps.app.goo.gl/bBkKyWECbE3BHXXd7"
+  />
+</Section>
