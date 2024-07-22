@@ -1,0 +1,56 @@
+---
+import { cn } from "@/lib/utils";
+import { Image } from "astro:assets";
+const {
+  class: className,
+  title,
+  subtitle,
+  date,
+  imgSrc,
+  imgAlt,
+  imgClass,
+  website,
+  location,
+  locationUrl,
+} = Astro.props;
+
+import MapPin from "@/components/icons/MapPin.astro";
+---
+
+<div
+  class={cn(
+    className,
+    "relative rounded-2xl border border-gray-200 bg-gray-50 dark:border-zinc-800 dark:bg-zinc-900 px-5 py-3 shadow-md",
+  )}
+>
+  {
+    imgSrc && (
+      <Image
+        class={cn(
+          "mb-3 md:absolute md:mb-0 pointer-events-none select-none shadow-md",
+          imgClass,
+        )}
+        loading="eager"
+        src={imgSrc}
+        alt={imgAlt}
+      />
+    )
+  }
+
+  <div class="flex flex-col gap-y-1.5">
+    <div class="flex flex-col gap-y-0.5">
+      <h1 class="text-lg font-medium">{title}</h1>
+      <div
+        class="flex flex-col sm:flex-row sm:justify-between text-sm text-zinc-800/90 dark:text-zinc-200/90"
+      >
+        <a class="hover:text-blue-400" href={website}>{subtitle}</a>
+        <span class="flex items-center">
+          <MapPin class="w-4 h-4 mr-1" />
+          <a class="hover:text-blue-400" href={locationUrl}>{location}</a>
+        </span>
+      </div>
+      <h2 class="text-sm text-zinc-800/90 dark:text-zinc-200/90">{date}</h2>
+    </div>
+    <slot />
+  </div>
+</div>

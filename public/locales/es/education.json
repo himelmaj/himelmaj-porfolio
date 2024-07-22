@@ -1,0 +1,21 @@
+{
+  "title": "Formación",
+  "education1": {
+    "title": "Grado Superior de Desarrollo de Aplicaciones Web",
+    "subtitle": "Monlau",
+    "date": "Sep 2022 - Jun 2024",
+    "location": "Barcelona, España"
+  },
+  "education2": {
+    "title": "Bootcamp de Ciberseguridad & Python",
+    "subtitle": "Fundación Esplai - Ciudadanía Comprometida",
+    "date": "Jun 2023 - Sep 2023",
+    "location": "Barcelona, España"
+  },
+  "education3": {
+    "title": "Grado Medio de Sistemas Microinformáticos y Redes",
+    "subtitle": "Monlau",
+    "date": "Sep 2020 - Jun 2022",
+    "location": "Barcelona, España"
+  }
+}

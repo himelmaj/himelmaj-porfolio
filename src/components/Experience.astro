@@ -1,0 +1,58 @@
+---
+import Section from "./ui/Section.astro";
+import Card from "./ui/Card.astro";
+import SantPau from "@/assets/santpau.webp";
+import EscolaPereDeTera from "@/assets/escola-pere-de-tera.webp";
+
+import { t, setDefaultNamespace } from "i18next";
+setDefaultNamespace("experience");
+
+const experiences = [
+  {
+    title: t("experience1.title"),
+    subtitle: t("experience1.subtitle"),
+    date: t("experience1.date"),
+    imgSrc: SantPau,
+    imgAlt: "Sant Pau logo",
+    imgClass: "h-12 w-auto md:-left-16 rounded-full",
+    location: t("experience1.location"),
+    website: "https://www.santpau.cat/",
+    locationUrl: "https://maps.app.goo.gl/vcx4Q81YWxKLadRn9",
+    descriptions: [
+      t("experience1.description1"),
+      t("experience1.description2"),
+      t("experience1.description3"),
+      t("experience1.description4"),
+      t("experience1.description5")
+    ]
+  },
+  {
+    title: t("experience2.title"),
+    subtitle: t("experience2.subtitle"),
+    date: t("experience2.date"),
+    imgSrc: EscolaPereDeTera,
+    imgAlt: "Escola Pere de Tera logo",
+    imgClass: "h-12 w-auto md:-left-16 rounded-full",
+    location: t("experience2.location"),
+    website: "https://agora.xtec.cat/ceip-peredetera/",
+    locationUrl: "https://maps.app.goo.gl/1RcCnjz4tx9kmcmk6",
+    descriptions: [
+      t("experience2.description1"),
+      t("experience2.description2"),
+      t("experience2.description3")
+    ]
+  }
+];
+---
+
+<Section title={t("title")}>
+  {experiences.map((experience) => (
+    <Card {...experience}>
+      <ul class="ml-4 list-disc text-zinc-800/90 dark:text-zinc-200/90 text-sm">
+        {experience.descriptions.map((description) => (
+          <li>{description}</li>
+        ))}
+      </ul>
+    </Card>
+  ))}
+</Section>
