@@ -1,0 +1,50 @@
+---
+import Section from "./ui/Section.astro";
+import ProjectCard from "./ui/ProjectCard.astro";
+import Shorten from "@/assets/shorten.webp";
+import HimelmajLink from "@/assets/himelmaj-link.webp";
+import Meraki from "@/assets/meraki.webp";
+import GitHub from "@/assets/github.webp";
+
+import { t, setDefaultNamespace } from "i18next";
+
+setDefaultNamespace("about");
+
+const projectsData = [
+  {
+    href: "https://sh-rten.vercel.app/",
+    title: "Sh🌐rten",
+    subtitle: "A web app to shorten URLs",
+    src: Shorten,
+    alt: "Sh🌐rten logo",
+  },
+  {
+    href: "https://himelmaj.vercel.app/",
+    title: "🔗 himelmaj link",
+    subtitle: "My personal links page",
+    src: HimelmajLink,
+    alt: "🔗 himelmaj.link logo",
+  },
+  {
+    href: "https://neurolab-dev.alumnes-monlau.com/login",
+    title: "Meraki 🧠",
+    subtitle: "Creamos Meraki, una app para psicólogas que gestiona alumnos y citas",
+    src: Meraki,
+    alt: "Meraki Screen Shot Web App",
+  },
+  {
+    href: "https://github.com/himelmaj",
+    title: "View all projects ➡️",
+    subtitle: "Check out my GitHub profile",
+    src: GitHub,
+    alt: "GitHub logo",
+  },
+];
+
+---
+
+<Section title="Projects">
+  <div class="grid sm:grid-cols-2 gap-2 w-full">
+    {projectsData.map((project) => <ProjectCard {...project} class="w-full" />)}
+  </div>
+</Section>

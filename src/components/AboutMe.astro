@@ -1,24 +1,13 @@
 ---
 import Section from "./ui/Section.astro";
-
-let today = new Date();
-let birthdate = new Date("2002-07-17");
-let age = today.getFullYear() - birthdate.getFullYear();
-let monthDifference = today.getMonth() - birthdate.getMonth();
-
-if (
-  monthDifference < 0 ||
-  (monthDifference === 0 && today.getDate() < birthdate.getDate())
-) {
-  age--;
-}
+import { t, setDefaultNamespace } from "i18next";
+setDefaultNamespace("about");
 ---
 
-<Section title="About Me">
-  <p>
-    My name is Himel, I am {age} years old and originally from Bangladesh 🇧🇩, but
-    I have lived almost my entire life in Barcelona, Spain 🇪🇸. I completed my studies
-    as a Web Developer. I love focusing on performance to offer an improved user
-    experience.
-  </p>
+<Section title={t("title")}>
+  <div class="relative rounded-2xl border border-gray-200 bg-gray-50 dark:border-zinc-800 dark:bg-zinc-900 px-5 py-3 shadow-md">
+    <p class="text-justify ">
+      {t("description")}
+    </p>
+  </div>
 </Section>
