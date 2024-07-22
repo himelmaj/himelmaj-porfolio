@@ -1,0 +1,23 @@
+{
+  "title": "Experiencia",
+  "experience1": {
+    "title": "Desarrollador Web en Prácticas",
+    "subtitle": "Hospital de la Santa Creu i Sant Pau",
+    "date": "Nov 2023 - Abr 2024",
+    "location": "Barcelona, España",
+    "description1": "Desarrollé un sistema de gestión de datos de pacientes, optimizando el manejo de información.",
+    "description2": "Añadí funcionalidades clave para seguimiento y registro de pacientes, mejorando la eficiencia del personal médico.",
+    "description3": "Implementé medidas de seguridad robustas para proteger datos sensibles.",
+    "description4": "Colaboré en la creación de una aplicación web, mejorando la integración de sistemas.",
+    "description5": "Diseñé una interfaz intuitiva, facilitando la navegación para usuarios y personal médico."
+  },
+  "experience2": {
+    "title": "Técnico de Soporte Informático en Prácticas",
+    "subtitle": "Escola Pere de Tera",
+    "date": "Oct 2021 - Mar 2022",
+    "location": "Badalona, España",
+    "description1": "Resolví problemas informáticos, mejorando la operatividad tecnológica.",
+    "description2": "Configuré y mantuve redes locales, optimizando la conectividad.",
+    "description3": "Implementé y actualicé software, asegurando su funcionalidad."
+  }
+}

@@ -1,0 +1,51 @@
+---
+import Section from "./ui/Section.astro";
+import Card from "./ui/Card.astro";
+import Monlau from "@/assets/monlau.webp";
+import FundacionEsplai from "@/assets/fundacion-esplai.webp";
+
+import { t, setDefaultNamespace } from "i18next";
+setDefaultNamespace("education");
+
+const educationItems = [
+  {
+    title: t("education1.title"),
+    subtitle: "Monlau",
+    date: "Sep 2022 - Jun 2024",
+    imgSrc: Monlau,
+    imgAlt: "Monlau logo",
+    imgClass: "h-12 w-auto md:-left-16 rounded-full",
+    location: t("education1.location"),
+    website: "https://www.monlau.com/",
+    locationUrl: "https://maps.app.goo.gl/bBkKyWECbE3BHXXd7"
+  },
+  {
+    title: t("education2.title"),
+    subtitle: t("education2.subtitle"),
+    date: t("education2.date"),
+    imgSrc: FundacionEsplai,
+    imgAlt: "Fundación Esplai logo",
+    imgClass: "h-12 w-auto md:-left-16 rounded-full",
+    location: t("education2.location"),
+    website: "https://fundacionesplai.org/",
+    locationUrl: "https://maps.app.goo.gl/bBkKyWECbE3BHXXd7"
+  },
+  {
+    title: t("education3.title"),
+    subtitle: t("education3.subtitle"),
+    date: t("education3.date"),
+    imgSrc: Monlau,
+    imgAlt: "Monlau logo",
+    imgClass: "h-12 w-auto md:-left-16 rounded-full",
+    location: t("education3.location"),
+    website: "https://www.monlau.com/",
+    locationUrl: "https://maps.app.goo.gl/bBkKyWECbE3BHXXd7"
+  }
+];
+---
+
+<Section title={t("title")}>
+  {educationItems.map((education) => (
+    <Card {...education} class="w-full" />
+  ))}
+</Section>

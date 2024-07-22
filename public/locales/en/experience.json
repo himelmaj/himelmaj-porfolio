@@ -1,0 +1,23 @@
+{
+  "title": "Experience",
+  "experience1": {
+    "title": "Web Developer Intern",
+    "subtitle": "Hospital de la Santa Creu i Sant Pau",
+    "date": "Nov 2023 - Apr 2024",
+    "location": "Barcelona, Spain",
+    "description1": "Developed a patient data management system, optimizing information handling.",
+    "description2": "Added key features for patient follow-up and record-keeping, enhancing medical staff efficiency.",
+    "description3": "Implemented robust security measures to protect sensitive data.",
+    "description4": "Collaborated in creating a web application, improving system integration.",
+    "description5": "Designed an intuitive interface, facilitating navigation for users and medical staff."
+  },
+  "experience2": {
+    "title": "IT Support Technician Intern",
+    "subtitle": "Escola Pere de Tera",
+    "date": "Oct 2021 - Mar 2022",
+    "location": "Badalona, Spain",
+    "description1": "Resolved IT issues, improving technological operability.",
+    "description2": "Configured and maintained local networks, optimizing connectivity.",
+    "description3": "Implemented and updated software, ensuring functionality."
+  }
+}

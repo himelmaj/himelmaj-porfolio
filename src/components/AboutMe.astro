@@ -1,0 +1,13 @@
+---
+import Section from "./ui/Section.astro";
+import { t, setDefaultNamespace } from "i18next";
+setDefaultNamespace("about");
+---
+
+<Section title={t("title")}>
+  <div class="relative rounded-2xl border border-gray-200 bg-gray-50 dark:border-zinc-800 dark:bg-zinc-900 px-5 py-3 shadow-md">
+    <p class="text-justify ">
+      {t("description")}
+    </p>
+  </div>
+</Section>

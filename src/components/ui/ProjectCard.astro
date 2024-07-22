@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import { cn } from "@/lib/utils";
+
+const {
+  as: Tag = "a",
+  class: className,
+  href,
+  title,
+  subtitle,
+  src,
+  alt,
+} = Astro.props;
+---
+
+<Tag
+  class={cn(
+    className,
+    "flex flex-col gap-y-3 rounded-2xl border border-gray-200 bg-gray-50 dark:border-zinc-800 hover:border-zinc-900 dark:bg-zinc-900 shadow-md ",
+    href && "transition-all hover:border-gray-300 dark:hover:border-zinc-700 hover:shadow-sm"
+  )}
+  href={href}
+>
+  <Image
+    src={src}
+    alt={alt}
+    class="h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover transition duration-500 ease-in-out transform"
+    loading="eager"
+  />
+  <div class="flex flex-col gap-y-0.5 px-5 py-4">
+    <h1 class="text-lg font-medium">{title}</h1>
+    <h2 class="text-muted-foreground text-sm text-zinc-800/90 dark:text-zinc-200/90 ">{subtitle}</h2>
+  </div>
+
+  <slot />
+</Tag>
