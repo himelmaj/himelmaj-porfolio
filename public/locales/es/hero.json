@@ -6,6 +6,9 @@
         "email": "Contactame",
         "linkedin": "LinkedIn",
         "github": "GitHub",
-        "cv": "Descargar CV"
+        "cv": {
+            "title": "Descargar CV",
+            "url": "/public/cv/spanish.pdf"
+        }
     }
 }

@@ -14,9 +14,9 @@ setDefaultNamespace("hero");
 
 const contact = [
   {
-    href: Resume,
+    href: t("contacts.cv.url"),
     icon: File,
-    text: t("contacts.cv"),
+    text: t("contacts.cv.title"),
     download: "Himel_Majumder_CV.pdf",
   },
   {
@@ -48,29 +48,28 @@ const contact = [
     />
   </div>
   <div class="flex flex-col gap-y-3 md:w-2/3">
-    <a
-      href="https://linkedin.com/in/himelmaj"
-      target="_blank"
-      rel="noopener"
-      class="flex transition"
-    >
-      <Badge>
-        {t("availability")}
-      </Badge>
-    </a>
+    <Badge>
+      {t("availability")}
+    </Badge>
 
     <h1 class="text-5xl font-semibold">Himel Majumder</h1>
-    <h3 class="text-zinc-800/90 dark:text-zinc-200/90 font-semibold">
-      {t("position")}{t("location")}
-    </h3>
-
+    <div class="flex flex-wrap gap-y-2">
+      <h3 class="text-zinc-800/90 dark:text-zinc-200/90 font-semibold">
+        {t("position")}
+      </h3>
+      <h3 class="text-zinc-800/90 dark:text-zinc-200/90 font-semibold">
+        {t("location")}
+      </h3>
+    </div>
     <div class="flex flex-col sm:flex-row gap-x-4 gap-y-2 text-sm">
-      {contact.map((item) => (
-        <Button {...item} >
-          <item.icon class="w-4 h-4" />
-          {item.text}
-        </Button>
-      ))}
+      {
+        contact.map((item) => (
+          <Button {...item}>
+            <item.icon class="w-4 h-4" />
+            {item.text}
+          </Button>
+        ))
+      }
     </div>
   </div>
 </section>
