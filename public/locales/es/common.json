@@ -4,33 +4,9 @@
     "description": "Este es el portfolio de Himel Majumder, un diseñador web y desarrollador de aplicaciones web de Bangladesh. Aquí puedes ver sus trabajos y contactar con él."
   },
   "layout": {
-    "header": "header.html",
     "footer": {
       "copyright": {
-        "message": "Todos los derechos reservados"
-      }
-    }
-  },
-  "sections": {
-    "education": {
-      "title": "Formación Académica",
-      "education1": {
-        "title": "Grado Superior de Desarrollo de Aplicaciones Web",
-        "subtitle": "Monlau",
-        "date": "Sep 2022 - Jun 2024",
-        "location": "Barcelona, España"
-      },
-      "education2": {
-        "title": "Bootcamp de Ciberseguridad & Python",
-        "subtitle": "Fundación Esplai - Ciudadanía Comprometida",
-        "date": "Jun 2023 - Sep 2023",
-        "location": "Barcelona, España"
-      },
-      "education3": {
-        "title": "Grado Medio de Sistemas Microinformáticos y Redes",
-        "subtitle": "Monlau",
-        "date": "Sep 2020 - Jun 2022",
-        "location": "Barcelona, España"
+        "message": "Casi todos los derechos reservados."
       }
     }
   }

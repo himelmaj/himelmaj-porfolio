@@ -1,5 +1,5 @@
 {
-    "availability": "💼 Cercant Feina",
+    "availability": "💼 Cercant feina",
     "position": "👨‍💻 Desenvolupador Web Full Stack",
     "location": "📍 Barcelona, Espanya",
     "contacts": {
@@ -7,7 +7,7 @@
         "linkedin": "LinkedIn",
         "github": "GitHub",
         "cv": {
-            "title": "Descarrega el CV",
+            "title": "Descarrega't el CV ",
             "url": "/cv/spanish.pdf"
         }
     }

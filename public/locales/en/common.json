@@ -4,33 +4,9 @@
     "description": "Este es el portafolio de Himel Majumder. Aquí puedes encontrar toda la información sobre Himel Majumder."
   },
   "layout": {
-    "header": "header.html",
     "footer": {
       "copyright": {
-        "message": "All rights reserved."
-      }
-    }
-  },
-  "sections": {
-    "education": {
-      "title": "Education",
-      "education1": {
-        "title": "Advanced Diploma in Web Application Development",
-        "subtitle": "Monlau",
-        "date": "Sep 2022 - Jun 2024",
-        "location": "Barcelona, Spain"
-      },
-      "education2": {
-        "title": "Cybersecurity & Python Bootcamp",
-        "subtitle": "Fundación Esplai - Ciudadanía Comprometida",
-        "date": "Jun 2023 - Sep 2023",
-        "location": "Barcelona, Spain"
-      },
-      "education3": {
-        "title": "Intermediate Degree in Microcomputer Systems and Networks",
-        "subtitle": "Monlau",
-        "date": "Sep 2020 - Jun 2022",
-        "location": "Barcelona, Spain"
+        "message": "Almost all rights reserved."
       }
     }
   }

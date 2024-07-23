@@ -10,10 +10,10 @@
     },
     "project3": {
         "title": "Meraki 🧠",
-        "description": "Creamos Meraki, una app para psicólogas que gestiona alumnos y citas."
+        "description": "Creamos Meraki, una app para psicólogas que gestiona alumnas y citas."
     },
     "default": {
         "title": "Ver todos los proyectos ➡️",
-        "description": "Consulta todos mis proyectos en GitHub."
+        "description": "Consulta todos mis proyectos en GitHub"
     }
 }

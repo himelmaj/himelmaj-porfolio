@@ -28,7 +28,7 @@ export default {
         icon: null
     },
     SUPABASE: {
-        name: 'supabase',
+        name: 'Supabase',
         class: "bg-[#1c1c1c] gap-x-1 text-white",
         icon: Supabase
     },
