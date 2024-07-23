@@ -1,0 +1,76 @@
+---
+import Image from "astro/components/Image.astro";
+import Default from "@/assets/default.webp";
+import Badge from "@/components/ui/Badge.astro";
+import Button from "@/components/ui/Button.astro";
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import Mail from "@/components/icons/Mail.astro";
+import File from "@/components/icons/File.astro";
+import Resume from "@/assets/resume.pdf";
+
+import { t, setDefaultNamespace } from "i18next";
+setDefaultNamespace("hero");
+
+const contact = [
+  {
+    href: Resume,
+    icon: File,
+    text: t("contacts.cv"),
+    download: "Himel_Majumder_CV.pdf",
+  },
+  {
+    href: "mailto:himelmajumder1@gmail.com",
+    icon: Mail,
+    text: t("contacts.email"),
+  },
+  {
+    href: "https://linkedin.com/in/himelmaj",
+    icon: LinkedIn,
+    text: t("contacts.linkedin"),
+  },
+  {
+    href: "https://github.com/himelmaj",
+    icon: GitHub,
+    text: t("contacts.github"),
+  },
+];
+---
+
+<section class={"flex flex-col gap-y-5 md:flex-row md:gap-y-0"}>
+  <div class="text-xl font-semibold md:w-1/3 flex justify-center items-center">
+    <Image
+      src={Default}
+      alt="Himel Majumder"
+      width="200"
+      height="200"
+      class={"rounded-full"}
+    />
+  </div>
+  <div class="flex flex-col gap-y-3 md:w-2/3">
+    <a
+      href="https://linkedin.com/in/himelmaj"
+      target="_blank"
+      rel="noopener"
+      class="flex transition"
+    >
+      <Badge>
+        {t("availability")}
+      </Badge>
+    </a>
+
+    <h1 class="text-5xl font-semibold">Himel Majumder</h1>
+    <h3 class="text-zinc-800/90 dark:text-zinc-200/90 font-semibold">
+      {t("position")}{t("location")}
+    </h3>
+
+    <div class="flex flex-col sm:flex-row gap-x-4 gap-y-2 text-sm">
+      {contact.map((item) => (
+        <Button {...item} >
+          <item.icon class="w-4 h-4" />
+          {item.text}
+        </Button>
+      ))}
+    </div>
+  </div>
+</section>
