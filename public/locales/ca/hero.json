@@ -1,0 +1,14 @@
+{
+    "availability": "💼 Cercant Feina",
+    "position": "👨‍💻 Desenvolupador Web Full Stack",
+    "location": "📍 Barcelona, Espanya",
+    "contacts": {
+        "email": "Contacta'm",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "cv": {
+            "title": "Descarrega el CV",
+            "url": "/cv/spanish.pdf"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "title": "Projectes",
+    "project1": {
+        "title": "Sh🌐rten",
+        "description": "Un escurçador d'URL amb un disseny modern i una interfície senzilla."
+    },
+    "project2": {
+        "title": "🔗 himelmaj links",
+        "description": "La meva pàgina de links personals, on pots trobar totes les meves xarxes socials i altres enllaços."
+    },
+    "project3": {
+        "title": "Meraki 🧠",
+        "description": "Vam crear Meraki, una aplicació per a psicòlegs que gestiona estudiants i cites."
+    },
+    "default": {
+        "title": "Veure tots els projectes ➡️",
+        "description": "Consulta tots els meus projectes a GitHub."
+    }
+}
