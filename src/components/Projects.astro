@@ -5,46 +5,60 @@ import Shorten from "@/assets/shorten.webp";
 import HimelmajLink from "@/assets/himelmaj-link.webp";
 import Meraki from "@/assets/meraki.webp";
 import GitHub from "@/assets/github.webp";
+import Tag from "./ui/Tag.astro";
+import tags from "@/lib/tags";
 
-import { setDefaultNamespace } from "i18next";
-
-setDefaultNamespace("about");
+import { t, setDefaultNamespace } from "i18next";
+setDefaultNamespace("project");
 
 const projectsData = [
   {
     href: "https://sh-rten.vercel.app/",
-    title: "Sh🌐rten",
-    subtitle: "A web app to shorten URLs",
+    title: t("project1.title"),
+    subtitle: t("project1.description"),
     src: Shorten,
     alt: "Sh🌐rten logo",
+    tags: [tags.NEXT, tags.TAILWIND, tags.SUPABASE],
   },
   {
     href: "https://himelmaj.vercel.app/",
-    title: "🔗 himelmaj link",
-    subtitle: "My personal links page",
+    title: t("project2.title"),
+    subtitle: t("project2.description"),
     src: HimelmajLink,
     alt: "🔗 himelmaj.link logo",
+    tags: [tags.ASTRO, tags.TAILWIND],
   },
   {
     href: "https://neurolab-dev.alumnes-monlau.com/login",
-    title: "Meraki 🧠",
-    subtitle: "Creamos Meraki, una app para psicólogas que gestiona alumnos y citas",
+    title: t("project3.title"),
+    subtitle: t("project3.description"),
     src: Meraki,
     alt: "Meraki Screen Shot Web App",
+    tags: [tags.LARAVEL, tags.LIVEWIRE, tags.TAILWIND],
   },
   {
     href: "https://github.com/himelmaj",
-    title: "View all projects ➡️",
-    subtitle: "Check out my GitHub profile",
+    title:t("default.title"),
+    subtitle: t("default.description"),
     src: GitHub,
     alt: "GitHub logo",
+    tags: [],
   },
 ];
-
 ---
 
-<Section title="Projects">
+<Section title={t("title")} >
   <div class="grid sm:grid-cols-2 gap-2 w-full">
-    {projectsData.map((project) => <ProjectCard {...project} class="w-full" />)}
+    {
+      projectsData.map((project) => (
+        <ProjectCard {...project}>
+          {project.tags.map((tag) => (
+            <Tag name={tag.name} class={tag.class} >
+              <tag.icon class="w-3 h-3" />
+            </Tag>
+          ))}
+        </ProjectCard>
+      ))
+    }
   </div>
 </Section>

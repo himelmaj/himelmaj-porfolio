@@ -1,6 +1,7 @@
 ---
 import { LanguageSelector } from "astro-i18next/components";
 import ThemeToggle from "./ThemeToggle.astro";
+import { cn } from "@/lib/utils";
 ---
 
 <header
@@ -17,7 +18,9 @@ import ThemeToggle from "./ThemeToggle.astro";
 
       <LanguageSelector
         showFlag={true}
-        class="bg-white dark:bg-zinc-900 hover:bg-gray-100 hover:dark:bg-zinc-800 p-2 rounded-md px-3 appearance-none cursor-pointer text-md shadow-md"
+        class={cn(
+          "bg-white dark:bg-zinc-900 p-2 rounded-md px-3 appearance-none cursor-pointer text-md shadow-md border transition-all hover:shadow-sm border-gray-200 hover:border-gray-300 dark:border-zinc-800 dark:hover:border-zinc-700",
+        )}
       />
     </div>
   </nav>
