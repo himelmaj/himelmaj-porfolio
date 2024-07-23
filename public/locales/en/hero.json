@@ -1,0 +1,14 @@
+{
+    "availability": "💼 Seeking Job ",
+    "position": " 👨‍💻 Full Stack Web Developer",
+    "location": "📍 Barcelona, Spain",
+    "contacts": {
+        "email": "Contact Me",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "cv": {
+            "title": "Download CV",
+            "url": "/cv/english.pdf"
+        }
+    }
+}

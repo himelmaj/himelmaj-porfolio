@@ -1,0 +1,11 @@
+---
+import { cn } from "@/lib/utils";
+import { Image } from "astro:assets";
+const { class: className, name, iconTag } = Astro.props;
+---
+
+
+<span class={cn("flex justify-center items-center rounded-full text-xs px-2 py-1 dark:border dark:border-zinc-800 dark:hover:border-zinc-700 shadow-md", className)}>
+    <slot/>
+    {name}
+</span>
