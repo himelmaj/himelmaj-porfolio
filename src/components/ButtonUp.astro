@@ -1,0 +1,60 @@
+---
+import ArrowRight from "./icons/ArrowRight.astro"
+---
+
+
+<div
+	id="scrollButton"
+	class="fixed bottom-6 right-6 z-50 hidden transition-opacity duration-300 transform translate-y-2 opacity-0"
+>
+	<button
+		id="scroll-to-top"
+		aria-label="Volver al inicio de la página"
+		class:list={["group items-center justify-center backdrop-blur hover:scale-105 hover:border-accent motion-safe:transition", "bg-white dark:bg-zinc-900 p-2 rounded-full appearance-none cursor-pointer text-md shadow-md border transition-all hover:shadow-sm border-gray-200 hover:border-gray-300 dark:border-zinc-800 dark:hover:border-zinc-700"]}
+	>
+	<ArrowRight class="h-6 w-6 -rotate-45 group-hover:-rotate-90 group-hover:text-accent motion-safe:transition" aria-label="Up to top page" />
+	</button>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const scrollButton = document.getElementById("scrollButton");
+		if (!scrollButton) return;
+		if (window.scrollY > 100) {
+			scrollButton.classList.remove(
+				"hidden",
+				"opacity-0",
+				"translate-y-2",
+			);
+			scrollButton.classList.add("opacity-100", "translate-y-0");
+		}
+
+		document.addEventListener("scroll", () => {
+			if (window.scrollY > 100) {
+				scrollButton.classList.remove(
+					"hidden",
+					"opacity-0",
+					"translate-y-2",
+				);
+				scrollButton.classList.add("opacity-100", "translate-y-0");
+			} else {
+				scrollButton.classList.add("opacity-0", "translate-y-2");
+				scrollButton.classList.remove("opacity-100", "translate-y-0");
+				setTimeout(() => {
+					if (window.scrollY <= 100) {
+						scrollButton.classList.add("hidden");
+					}
+				}, 300);
+			}
+		});
+
+		document
+			.getElementById("scrollButton")
+			.addEventListener("click", () => {
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth",
+				});
+			});
+	});
+</script>

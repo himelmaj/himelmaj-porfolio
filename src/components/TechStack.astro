@@ -21,7 +21,6 @@ import Tailwind from "./icons/Tailwind.astro";
 import T3Stack from "./icons/T3Stack.astro";
 import ReactIcon from  "./icons/React.astro";
 import Zod from "./icons/Zod.astro";
-import Zeabur from "./icons/Zeabur.astro";
 import MariaDB from "./icons/MariaDB.astro";
 import PlanetScale from "./icons/PlanetScale.astro";
 import CSS from "./icons/CSS.astro";
@@ -29,13 +28,16 @@ import HTML from "./icons/HTML.astro";
 import Expo from "./icons/Expo.astro";
 import GitHubSVG from "./icons/GitHubSVG.astro";
 import Git from "./icons/Git.astro";
+import { t, setDefaultNamespace } from "i18next";
+setDefaultNamespace("techstack");
+
 ---
 
-<Section title="Skills">
+<Section title={t("title")}>
     <ul class="grid grid-cols-1 gap-2 relative rounded-2xl border border-gray-200 bg-gray-50 dark:border-zinc-800 dark:bg-zinc-900 px-5 py-3 shadow-md">
 
         <h3 class:list={["text-lg font-medium"]}>
-            Languages
+            {t("languages")}
         </h3>
         <li class="flex flex-wrap gap-2">
             <JavaScript class:list={["w-10 h-10 rounded-md"]} />
@@ -47,7 +49,7 @@ import Git from "./icons/Git.astro";
         </li>
 
         <h4 class:list={["text-lg font-medium"]}>
-            Frameworks
+            {t("frameworks")}
         </h4>
         <li class="flex flex-wrap gap-2">
             <NextJS class:list={["w-10 h-10 rounded-md"]} />
@@ -60,7 +62,7 @@ import Git from "./icons/Git.astro";
         </li>
 
         <h4 class:list={["text-lg font-medium"]}>
-            Libraries
+            {t("libraries")}
         </h4>
         <li class="flex flex-wrap gap-2">
             <ReactIcon class:list={["w-10 h-10 rounded-md"]} />
@@ -70,7 +72,7 @@ import Git from "./icons/Git.astro";
         </li>
 
         <h4 class:list={["text-lg font-medium"]}>
-            Databases
+            {t("databases")}
         </h4>
         <li class="flex flex-wrap gap-2">
             <MySQL class:list={["w-10 h-10 rounded-md"]} />
@@ -80,11 +82,10 @@ import Git from "./icons/Git.astro";
         </li>
 
         <h4 class:list={["text-lg font-medium"]}>
-            Other
+            {t("others")}
         </h4>
         <li class="flex flex-wrap gap-2">
             <Vercel class:list={["w-10 h-10 rounded-md"]} />
-            <Zeabur class:list={["w-10 h-10 rounded-md"]} />
             <T3Stack class:list={["w-10 h-10 rounded-md"]} />
             <Supabase class:list={["w-10 h-10 rounded-md"]} />
             <NeonBase class:list={["w-10 h-10 rounded-md"]} />
@@ -95,30 +96,3 @@ import Git from "./icons/Git.astro";
 
     </ul>
 </Section>
-
-
-<!-- 
-
-JS
-TS
-Python
-PHP
-NODEJS
-NEXTJS
-LARAVEL
-ASTRO
-FASTAPI
-MYSQL
-MONGODB
-POSTGRESQL
-PRISMA
-SUPABASE
-VERCEL
-NEONBASE
-EXPRESS
-TAILWIND
-T3STACK
-REACT
-
-
--->
