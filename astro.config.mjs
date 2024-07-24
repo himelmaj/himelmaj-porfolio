@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import astroI18next from "astro-i18next";
 import sitemap from "@astrojs/sitemap";
-import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,10 +11,4 @@ export default defineConfig({
     enabled: false
   },
   integrations: [tailwind(), astroI18next(), sitemap()],
-  output: "server",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  })
 });
