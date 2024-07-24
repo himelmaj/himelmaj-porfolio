@@ -1,11 +1,12 @@
 ---
 import { SEO } from "astro-seo";
+import { t } from "i18next";
 ---
 
 <SEO
   charset="UTF-8"
-  title={"Himel 🧑🏾 Porfolio "}
-  description={"Himel Majumder Porfolio 🧑🏾"}
+  title={t("site.title") || "Himel 🧑🏾 Portfolio"}
+  description={t("site.description") || "Himel Majumder Porfolio 🧑🏾"}
   openGraph={{
     basic: {
       title: "Himel Majumder Porfolio",
