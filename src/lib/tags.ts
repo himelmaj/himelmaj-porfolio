@@ -19,7 +19,7 @@ export default {
     },
     LARAVEL: {
         name: 'Laravel',
-        class: "bg-white gap-x-1 text-white text-red-600 border-white dark:border-white hover:border-white hover:dark:border-white",
+        class: "bg-zinc-900 gap-x-1 text-white",
         icon: Laravel
     },
     DRIZZLE: {
