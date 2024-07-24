@@ -7,7 +7,7 @@ import LinkedIn from "@/components/icons/LinkedIn.astro";
 import GitHub from "@/components/icons/GitHub.astro";
 import Mail from "@/components/icons/Mail.astro";
 import File from "@/components/icons/File.astro";
-
+import Me from "@/assets/me.webp";
 import { t, setDefaultNamespace } from "i18next";
 setDefaultNamespace("hero");
 
@@ -39,7 +39,7 @@ const contact = [
 <section class={"flex flex-col gap-y-5 md:flex-row md:gap-y-0"}>
   <div class="text-xl font-semibold md:w-1/3 flex p-5 justify-center items-center">
     <Image
-      src={Default}
+      src={Me}
       alt="Himel Majumder"
       class={"rounded-full shadow-lg h-48 w-48 md:w-full md:h-full md:object-cover"}
     />
