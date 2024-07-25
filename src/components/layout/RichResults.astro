@@ -1,0 +1,30 @@
+---
+const determineCanonicalURL = () => {
+  if (Astro.url.host.includes("localhost")) return "http://localhost:4321";
+  return Astro.url.pathname;
+};
+
+const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
+
+const screenshot = new URL('/screenshot.webp', Astro.url)
+const logo = new URL('/logo.webp', Astro.url)
+
+const creatorSchema = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"url": canonicalURL,
+	"image": screenshot,
+	"sameAs": [
+		"https://www.linkedin.com/in/himelmaj/",
+		"https://x.com/himelmaj",
+		"https://github.com/himelmaj",
+	],
+	"logo": logo,
+	"name": "Himel Majumder",
+	"alternateName": "Himel Majumder",
+	"description": "Himel Majumder is a Full Stack Web Developer, who loves to build web applications with modern technologies.",
+}
+
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(creatorSchema)} />
