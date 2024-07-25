@@ -28,7 +28,7 @@ import Background from "../components/layout/Background.astro";
   <body class="relative text-black dark:text-white">
     <SpeedInsights />
     <Background />
-    <div class="opacity-80 w-full mx-auto container lg:max-w-4xl md:max-w-2xl flex flex-col justify-center min-h-screen px-6 pb-10 pt-7 sm:px-10 lg:px-10">
+    <div class=" w-full mx-auto container lg:max-w-4xl md:max-w-2xl flex flex-col justify-center min-h-screen px-6 pb-10 pt-7 sm:px-10 lg:px-10">
       <Header />
       <main class="flex-1">
         <slot />
@@ -59,56 +59,9 @@ import Background from "../components/layout/Background.astro";
           scroll-behavior: auto;
         }
       }
-
       @media (prefers-color-scheme: dark) {
         body {
           color: rgba(255, 255, 255, 0.9);
-        }
-      }
-
-      #header-nav {
-        animation: blur linear both 0.5s;
-        animation-timeline: scroll();
-        animation-range: 0 500px;
-      }
-
-      @keyframes blur {
-        to {
-          backdrop-filter: blur(20px);
-          border-width: 1px;
-          border-color: rgba(0, 0, 0);
-          padding: 0.25rem 0.75rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          background-color: rgb(229, 229, 229);
-          border-radius: 9999px;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        @keyframes blur {
-          from {
-            border: 0px;
-          }
-          to {
-            box-shadow:
-              0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-              0px 0px 0 1px rgba(0, 0, 0, 0.3);
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(20px);
-            border-width: 1px;
-            border-color: rgba(0, 0, 0);
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 9999px;
-          }
         }
       }
     </style>
