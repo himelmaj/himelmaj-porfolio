@@ -1,5 +1,8 @@
 {
-  "name": "himelmaj-porfolio",
+  "name": "himelmaj.dev",
+  "description": "My personal portfolio website",
+  "author": "Himel Majumder",
+  "license": "Attribution-NonCommercial 4.0 International",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
