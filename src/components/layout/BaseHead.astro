@@ -8,6 +8,8 @@ const determineCanonicalURL = () => {
 };
 
 const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
+const screenshot = new URL('/screenshot.webp', Astro.url)
+
 ---
 <SEO
   charset="UTF-8"
@@ -18,7 +20,7 @@ const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
     basic: {
       title: "Himel Majumder Porfolio",
       type: "website",
-      image: "/screenshot.webp",
+      image: "https://himelmaj.vercel.app/screenshot.webp",
       url: canonicalURL,
     },
   }}
@@ -26,7 +28,7 @@ const canonicalURL = new URL(determineCanonicalURL(), Astro.site);
     card: "summary_large_image",
     site: "@himelmaj",
     creator: "@himelmaj",
-    image: "/screenshot.webp",
+    image: screenshot,
     imageAlt: "Himel Majumder Porfolio",
     description: "Himel Majumder Porfolio 🧑🏾",
   }}
