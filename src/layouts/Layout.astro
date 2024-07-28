@@ -1,15 +1,11 @@
 ---
 import "@fontsource-variable/inter";
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import i18next from "i18next";
-import { HeadHrefLangs } from "astro-i18next/components";
-import SpeedInsights from "@vercel/speed-insights/astro";
-import { ViewTransitions } from "astro:transitions";
-import BaseHead from "../components/layout/BaseHead.astro";
-import RichResults from "@/components/layout/RichResults.astro";
-import Background from "../components/layout/Background.astro";
-import Header from "../components/layout/Header.astro";
-import Footer from "../components/layout/Footer.astro";
+import BaseHead from "@/components/layout/BaseHead.astro";
+import Background from "@/components/layout/Background.astro";
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
 import ButtonUp from "@/components/ButtonUp.astro";
 ---
 
@@ -17,20 +13,9 @@ import ButtonUp from "@/components/ButtonUp.astro";
 <html lang={i18next.language}>
   <head>
     <BaseHead />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <RichResults />
-    <HeadHrefLangs />
-    <ViewTransitions />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1T913WK5M2"></script>
-    <script is:inline> window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-1T913WK5M2");
-    </script>
   </head>
 
   <body class="relative text-black dark:text-white">
-    <SpeedInsights />
     <Background />
     <div
       class="w-full mx-auto container lg:max-w-4xl md:max-w-2xl flex flex-col justify-center min-h-screen px-6 pb-10 pt-7 sm:px-10 lg:px-10"

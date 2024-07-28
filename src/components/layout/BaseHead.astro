@@ -1,6 +1,10 @@
 ---
 import { SEO } from "astro-seo";
 import { t } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+import { ViewTransitions } from "astro:transitions";
+import RichResults from "@/components/layout/RichResults.astro";
+
 
 const determineCanonicalURL = () => {
   if (Astro.url.host.includes("localhost")) return "http://localhost:4321";
@@ -99,3 +103,9 @@ const screenshot = new URL('/screenshot.webp', Astro.url)
     ],
   }}
 />
+
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+<RichResults />
+<HeadHrefLangs />
+<ViewTransitions />
