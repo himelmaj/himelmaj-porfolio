@@ -2,7 +2,7 @@
 
 <div align="center">
 <a href="https://himelmaj.vercel.app/">
-<img src="./public/og-image.webp">
+<img src="./public/screenshot.webp">
 </a>
 <p></p>
 </div>
