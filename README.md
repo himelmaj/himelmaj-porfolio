@@ -1,4 +1,4 @@
-# 🧑🏾‍💻 Py personal portfolio created with Astro
+# 🧑🏾‍💻 My personal portfolio created with Astro
 
 <div align="center">
 <a href="https://himelmaj.vercel.app/">
